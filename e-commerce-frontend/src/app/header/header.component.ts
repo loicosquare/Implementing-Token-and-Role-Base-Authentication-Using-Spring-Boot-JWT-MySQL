@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserAuthService } from '../_services/user-auth.service';
-import { UserService } from '../_services/user.service';
+import { UserAuthService } from '../_services/user-auth/user-auth.service';
+import { UserService } from '../_services/user/user.service';
 
 @Component({
   selector: 'app-header',
@@ -26,4 +26,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  public isAdmin(): boolean {
+    return this.userAuthService.isAdmin();
+  }
+
+  public isUser(): boolean {
+    return this.userAuthService.isUser();
+  }
 }

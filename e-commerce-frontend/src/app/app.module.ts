@@ -12,14 +12,15 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { AuthGuard } from './_auth/auth.guard';
-import { AuthInterceptor } from './_auth/auth.interceptor';
-import { UserService } from './_services/user.service';
+import { AuthInterceptor } from './_auth/interceptor/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AddNewProductComponent } from './add-new-product/add-new-product.component';
+import { UserService } from './_services/user/user.service';
+import { AuthGuard } from './_auth/guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent,
     HeaderComponent,
     ForbiddenComponent,
+    AddNewProductComponent,
   ],
   imports: [
     BrowserModule,
