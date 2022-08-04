@@ -15,6 +15,8 @@ export class ShowProductDetailsComponent implements OnInit {
     'Product Description',
     'Product Discounted Price',
     'Product Actual Price',
+    'Edit',
+    'Delete'
   ];
 
   productDetails: Product[] = [];
@@ -30,5 +32,12 @@ export class ShowProductDetailsComponent implements OnInit {
       next: (resp: Product[]) => (this.productDetails = resp),
       error: (err: HttpErrorResponse) => console.log(err),
     });
+  }
+
+  public deleteProductDetails(productId){
+    this.productService.deleteProductDetails(productId).subscribe({
+      next: (resp) => this.getAllProducts(), 
+      error: (err : HttpErrorResponse) => console.log(err)
+    })
   }
 }

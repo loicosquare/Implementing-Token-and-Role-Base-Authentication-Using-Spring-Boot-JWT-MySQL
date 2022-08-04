@@ -4,17 +4,22 @@ import baseUrl from '../../../app/_helper/helper';
 import { Product } from '../../../app/_model/product.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient : HttpClient) {}
-
-  public addProduct(product: FormData){
+  public addProduct(product: FormData) {
     return this.httpClient.post<Product>(`${baseUrl}/addNewProduct`, product);
   }
 
-  public getAllProducts(){
+  public getAllProducts() {
     return this.httpClient.get(`${baseUrl}/getAllProducts`);
+  }
+
+  public deleteProductDetails(productId: number) {
+    return this.httpClient.delete(
+      `${baseUrl}/deleteProductDetails/` + productId
+    );
   }
 }
