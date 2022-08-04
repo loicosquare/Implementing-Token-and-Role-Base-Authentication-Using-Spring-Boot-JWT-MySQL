@@ -13,4 +13,8 @@ export class ProductService {
   public addProduct(product: FormData){
     return this.httpClient.post<Product>(`${baseUrl}/addNewProduct`, product);
   }
+
+  public getAllProducts(){
+    return this.httpClient.get(`${baseUrl}/getAllProducts`);
+  }
 }

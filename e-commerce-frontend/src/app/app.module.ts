@@ -16,6 +16,7 @@ import { AuthInterceptor } from './_auth/interceptor/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
@@ -23,6 +24,7 @@ import { AddNewProductComponent } from './add-new-product/add-new-product.compon
 import { UserService } from './_services/user/user.service';
 import { AuthGuard } from './_auth/guard/auth.guard';
 import { DragDirective } from './_directive/drag.directive';
+import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { DragDirective } from './_directive/drag.directive';
     ForbiddenComponent,
     AddNewProductComponent,
     DragDirective,
-    
+    ShowProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,7 @@ import { DragDirective } from './_directive/drag.directive';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
   ],
   providers: [
     AuthGuard,

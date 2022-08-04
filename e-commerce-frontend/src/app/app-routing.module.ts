@@ -5,6 +5,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import { UserComponent } from './user/user.component';
 import { AuthGuard } from './_auth/guard/auth.guard';
 
@@ -29,6 +30,10 @@ const routes: Routes = [
     component: AddNewProductComponent,
     canActivate: [AuthGuard],
     data: { roles: ['Admin'] },
+  },
+  {
+    path: 'showProductDetails',
+    component: ShowProductDetailsComponent
   },
 ];
 
