@@ -17,10 +17,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
 import { UserService } from './_services/user/user.service';
 import { AuthGuard } from './_auth/guard/auth.guard';
+import { DragDirective } from './_directive/drag.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { AuthGuard } from './_auth/guard/auth.guard';
     HeaderComponent,
     ForbiddenComponent,
     AddNewProductComponent,
+    DragDirective,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ import { AuthGuard } from './_auth/guard/auth.guard';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
   ],
