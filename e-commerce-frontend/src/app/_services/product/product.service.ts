@@ -13,6 +13,10 @@ export class ProductService {
     return this.httpClient.post<Product>(`${baseUrl}/addNewProduct`, product);
   }
 
+  public getProductDetailsById(productId) {
+    return this.httpClient.get(`${baseUrl}/getProductDetailsById/`+productId);
+  }
+
   public getAllProducts() {
     return this.httpClient.get(`${baseUrl}/getAllProducts`);
   }

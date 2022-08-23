@@ -10,7 +10,7 @@ export class ImagesProcessingService {
 
   constructor(private sanitizer : DomSanitizer) { }
 
-  public createImages(product: Product) {
+  public createImages(product: /*Product*/ any) {
     const productImages: any[] = product.productImages;
 
     const productImagesToFileHandle: FileHandle[] = [];

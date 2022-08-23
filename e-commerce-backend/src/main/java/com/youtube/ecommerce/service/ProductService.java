@@ -17,6 +17,10 @@ public class ProductService {
         return productDao.save(product);
     }
 
+    public Product getProductDetailsById(Integer productId){
+        return this.productDao.findById(productId).get();
+    }
+
     public List<Product> getAllProducts(){
         return (List<Product>) this.productDao.findAll();
     }
