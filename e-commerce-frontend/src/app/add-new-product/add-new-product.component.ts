@@ -17,6 +17,7 @@ export class AddNewProductComponent implements OnInit {
   isNewProduct = true;
 
   product: Product = {
+    productId: null,
     productName: '',
     productDescription: '',
     productDiscountedPrice: 0,
