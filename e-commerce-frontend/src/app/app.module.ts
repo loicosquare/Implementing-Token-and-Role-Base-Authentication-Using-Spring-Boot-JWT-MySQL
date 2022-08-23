@@ -26,6 +26,8 @@ import { UserService } from './_services/user/user.service';
 import { AuthGuard } from './_auth/guard/auth.guard';
 import { DragDirective } from './_directive/drag.directive';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+import { ShowProductImagesDialogComponent } from './show-product-images-dialog/show-product-images-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
     AddNewProductComponent,
     DragDirective,
     ShowProductDetailsComponent,
+    ShowProductImagesDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [
     AuthGuard,
