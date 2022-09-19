@@ -37,7 +37,9 @@ const routes: Routes = [
   },
   {
     path: 'showProductDetails',
-    component: ShowProductDetailsComponent
+    component: ShowProductDetailsComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['Admin'] },
   },
 ];
 
