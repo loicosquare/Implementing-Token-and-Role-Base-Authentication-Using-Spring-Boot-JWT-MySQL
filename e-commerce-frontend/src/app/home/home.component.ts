@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Product } from '../_model/product.model';
 import { ImagesProcessingService } from '../_services/imagesProcessing/images-processing.service';
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   productDetails = [];
 
-  constructor(private productService : ProductService, private imagesProcessingService : ImagesProcessingService) { }
+  constructor(private productService : ProductService, private imagesProcessingService : ImagesProcessingService, private router : Router) { }
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
       },
       error: (err: HttpErrorResponse) => console.log(err),
     });
+  }
+
+  shoProductDetails(productId){
+    this.router.navigate(['/productViewDetails', {productId: productId}])
   }
 
 }
