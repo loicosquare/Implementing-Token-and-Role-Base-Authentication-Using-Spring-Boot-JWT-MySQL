@@ -8,6 +8,7 @@ import { Product } from '../_model/product.model';
   styleUrls: ['./product-view-details.component.css']
 })
 export class ProductViewDetailsComponent implements OnInit {
+  selectedProductIndex = 0;
 
   constructor(private activatedRoute : ActivatedRoute) { }
   
@@ -15,6 +16,10 @@ export class ProductViewDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = this.activatedRoute.snapshot.data['product'];
+  }
+
+  changeIndex(index){
+    this.selectedProductIndex = index;
   }
 
 }
