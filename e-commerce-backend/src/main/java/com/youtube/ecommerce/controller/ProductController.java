@@ -65,4 +65,10 @@ public class ProductController {
     public void deleteProductDetails(@PathVariable("productId") Integer productId){
         productService.deleteProductDetails(productId);
     }
+
+    @PreAuthorize("hasRole('User')")
+    @DeleteMapping({"/deleteProductDetails/{productId}"})
+    public void deleteProductDetails(@PathVariable("productId") Integer productId){
+        productService.deleteProductDetails(productId);
+    }
 }

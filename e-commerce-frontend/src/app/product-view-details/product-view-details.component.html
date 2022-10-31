@@ -25,7 +25,7 @@
                     <b>XAF. {{product.productDiscountedPrice}}</b>&nbsp;&nbsp; <b style="text-decoration: line-through; color: red;">{{product.productActualPrice}}</b>
                 </div>
                 <div class="mt-5 text-center">
-                    <button mat-raised-button color="warn" style="width: 200px;"> Buy now</button>
+                    <button mat-raised-button color="warn" style="width: 200px;" (click)="buyProduct()"> Buy now</button>
                 </div>
             </div>
         </div>

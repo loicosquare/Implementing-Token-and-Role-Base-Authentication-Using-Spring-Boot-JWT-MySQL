@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { BuyProductComponent } from './buy-product/buy-product.component';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
 import { AdminComponent } from './admin/admin.component';
@@ -46,7 +47,11 @@ const routes: Routes = [
     path: 'productViewDetails',
     component: ProductViewDetailsComponent,
     resolve: {product: ProductResolveService}
-  }
+  },
+  {
+    path: 'buyProduct',
+    component: BuyProductComponent
+  },
 ];
 
 @NgModule({
